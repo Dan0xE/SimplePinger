@@ -2,6 +2,15 @@
 <p> Simple Pinging Tool made in Python </p>
 
 # How to use:
+Get the libraries: 
+```
+pip install colorama
+```
+```
+pip install pythonping
+```
+
+
 Just input your time between each ping (this is in seconds) <br>
 then put in the IP address that you want to ping <br>
 then put in how many times you want to ping said address
