@@ -1,5 +1,5 @@
 # SimplePinger
-<h1> Simple Pinging Tool made in Python </h1>
+<p> Simple Pinging Tool made in Python </p>
 
 # How to use:
 Just input your time between each ping (this is in seconds) <br>
