@@ -2,7 +2,7 @@ from pythonping import ping
 import colorama
 from colorama import init
 from colorama import Fore, Back, Style
-import time 
+import time
 from time import sleep
 
 print(Fore.LIGHTMAGENTA_EX + """   _____ _                 __     ____  _                      
@@ -19,14 +19,23 @@ repeat = input("How many times do you want to ping the address?: ")
 repeat = int(repeat)
 snooze = int(snooze)
 
+
 def pingit():
     for i in range(repeat):
         sleep(snooze)
-        ping(f'{address}', verbose=True, size=472, count=1)
+        try:
+            ping(address)
+            print(Fore.GREEN + "Ping successful!")
+        except:
+            print(Fore.RED + "Ping failed!")
+            print("Check your connection or the host adress you are trying to ping.")
+            break
 
-def done(): 
-        print(Fore.WHITE + "Done, exiting in 3 seconds...")
-        sleep(3)
+
+def done():
+    print(Fore.WHITE + "Done, exiting in 3 seconds...")
+    sleep(3)
+
 
 pingit()
 done()
